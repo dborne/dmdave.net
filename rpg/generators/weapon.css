@@ -1,0 +1,137 @@
+
+body {
+    font-family: 'Bangers', cursive;
+    font-size: 30px;
+    background-color: #FAF4E3;
+}
+
+.btn-blue {
+  background: #108FE8;
+  border: 3px solid #fff;
+  border-radius: 100%;
+  box-shadow: 0 -2px 0 3px #0d72b8 inset, 0 5px 5px rgba(3, 25, 41, 0.17), 0 15px rgba(255, 255, 255, 0.25) inset;
+  cursor: pointer;
+  display: inline-block;
+  height: 5vw;
+  width: 5vw;
+}
+.btn-red {
+    background: #E53030;
+    border: 3px solid #fff;
+    border-radius: 100%;
+    box-shadow: 0 -2px 0 3px #c91919 inset, 0 5px 5px rgba(65, 8, 8, 0.17), 0 15px rgba(255, 255, 255, 0.25) inset;
+    cursor: pointer;
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+}
+
+.btn-red:hover {
+    background: #f44;
+    box-shadow: 0 -2px 0 3px #2a1a1a inset, 0 5px 5px rgba(0, 0, 0, 0.17), 0 15px rgba(255, 255, 255, 0.32) inset;
+}
+
+#damage-types {
+    text-align: center;
+    font-size: 20px;
+    color: #735;
+    padding: 5px;
+}
+
+#damage-types span {
+    padding: 0 4px;
+}
+
+#disp {
+    padding: 5px, 20px;
+    text-align: center;
+    color: #026;
+}
+
+#disp button {
+    margin-bottom: 20px;
+    font-family: 'Bangers', cursive;
+    font-size: 50px;
+    color: #eee;
+}
+
+#footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3vh;
+    width: 100%;
+    text-align: center;
+    font-size: 3vh;
+    padding: 1vh 0;
+    color: #FAF4E3;
+    background-color: #808065;
+}
+
+#footer a:link {
+    text-decoration: none;
+    color: #FAF4E3;
+}
+
+#footer a:visited {
+    color: #FAF4E3;
+}
+
+#footer a:hover {
+    color: #FAC4B3;
+}
+
+#past_weapons {
+    list-style-type: none;
+    font-family: 'Miltonian', cursive;
+    color: #888;
+}
+
+#past_weapons li:nth-child(1){
+    font-size: 38px;
+    opacity: 0.8;
+}
+#past_weapons li:nth-child(2){
+    font-size: 32px;
+    opacity: 0.7;
+}
+#past_weapons li:nth-child(3){
+    font-size: 29px;
+    opacity: 0.6;
+}
+#past_weapons li:nth-child(4){
+    font-size: 26px;
+    opacity: 0.5;
+}
+#past_weapons li:nth-child(5){
+    font-size: 23px;
+    opacity: 0.4;
+}
+#past_weapons li:nth-child(6){
+    font-size: 21px;
+    opacity: 0.3;
+}
+#past_weapons li:nth-child(7){
+    font-size: 19px;
+    opacity: 0.2;
+}
+#past_weapons li:nth-child(8){
+    font-size: 17px;
+    opacity: 0.1;
+}
+
+#patter {
+    width: 100%;
+    text-align: center;
+    color: #b22;
+    margin-top: 10%;
+}
+
+#weapon_name {
+    font-family: 'Miltonian', cursive;
+    font-size: 40px;
+    padding: 10px;
+    display: inline-block;
+    width: auto;
+    border: 3px dashed #ccc;
+}

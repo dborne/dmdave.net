@@ -1,0 +1,701 @@
+#abilities {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 6.00mm;
+}
+
+.ability {
+    position: relative;
+}
+
+.ability label {
+    position: absolute;
+    top: 0.60mm;
+    font-size: 5.40mm;
+    text-align: center;
+    width: 100%;
+}
+
+.ability input[type=text]{
+    height: 33.00mm;
+    width: 36.00mm;
+    box-sizing: border-box;
+    border-radius: 6.00mm;
+    border: 0.90mm solid black;
+    text-align: center;
+    font-size: 18.00mm;
+}
+
+.ability input[type=text].inset {
+    height: 33%;
+    width: 50%;
+    font-size: 6.60mm;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -12%;
+    left: 25%;
+}
+
+#acblock {
+    position: relative;
+    display: inline-block;
+}
+
+#acblock input#ac[type=text] {
+    border: none;
+    position: relative;
+    z-index: 10;
+    background: transparent;
+}
+
+#gear>div {
+    margin: 0 3.00mm 0 6.00mm;   
+}
+
+#attackblock{
+    padding: 3.00mm 3.00mm 0 3.00mm;
+    border: 0.90mm solid black;
+    border-radius: 9.00mm;
+}   
+
+#attackblock span {
+    display: inline-block;
+    width: 20%;
+    font-size: 3.90mm;
+    box-sizing: border-box;
+    color: #888;
+    margin: 0 1.50mm;
+    flex: 1;
+}
+
+#attackblock span.name {
+    flex: 4;
+}
+
+#attackblock div.attack_flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#attackblock .attack input {
+    background-color: #ccc;
+    color: black;
+    text-align: center;
+    font-size: 9.00mm;
+    padding: 0;
+    border: none;
+    flex: 1;
+    width: 20%;
+    margin: 0 1.50mm;
+}
+
+#attackblock input.desc {
+    font-size: 4.80mm;
+    margin: 1.50mm 1.50mm 4.50mm 1.50mm;
+    background-color: #eee;
+    width: 100%;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    text-align: left;
+}
+
+#attackblock input.name {
+    flex: 4;
+    text-transform: capitalize;
+}
+
+#attackblock label {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    font-size: 6.00mm;
+}
+
+body {
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-size: 0;
+    background-color: #FFFDFA;
+}
+
+#charsheet_5e {
+    height: 300.00mm;
+    width: 405.00mm;
+}
+
+.checkbox-holder {
+    position: relative;
+    top: 1.80mm;
+}
+
+#combat {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 6.00mm;
+    width: 120.00mm;
+}
+
+#deathsave {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    display: inline-block;
+    border-radius: 9.00mm;
+    border: 0.90mm solid black;
+    background-color: transparent;
+    font-size: 0;
+    width: 45%;
+    height: 36.00mm;
+    padding: 1.50mm;
+}
+
+#deathsave>label {
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 6.00mm;
+    text-align: center;
+}
+
+.deathboxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.deathboxes label  {
+    position: relative;
+    font-size: 5.25mm;
+    width: 21.00mm;
+}
+
+.deathboxes label::after  {
+    content: "";
+    position: absolute;
+    right: -17.25mm;
+    top: 50%;
+    width: 12.90mm;
+    height: 0.90mm;
+    background: gray;
+}
+
+#description {
+    position: relative;
+    border: 0.90mm solid black;
+    border-radius: 9.00mm;
+    height: 60.00mm;
+    
+}
+
+#description label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 6.00mm;
+}
+
+#description textarea {
+    font-family: 'Shalimar', cursive;
+    font-size: 10.50mm;
+    padding: 3.60mm;
+    box-sizing: border-box;
+    resize: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: none;
+    background-color: transparent;
+}
+
+#description textarea:focus {
+    outline: none;
+}
+
+.dsave {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 4.50mm;
+    height: 4.50mm;
+    margin: 0;
+}
+
+.dsave-cover {
+    position: relative;
+    display: inline-block;
+    height: 3.00mm;
+    width: 3.00mm;
+    background-color: white;
+    border-radius: 50%;
+    border: 0.60mm solid black;
+    top: 0;
+    left: 0;
+}
+
+.dsave:checked ~ .dsave-cover {
+    background-color: #444;
+    box-shadow: 0 0 0.75mm 0.75mm rgba(255, 255, 255, .8) inset;
+    opacity: 1;
+}
+
+#gear {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+#gearblock {
+    padding: 3.00mm;
+    border: 0.90mm solid black;
+    border-radius: 9.00mm;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+}
+
+#gearblock label {
+    display: inline-block;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    font-size: 6.00mm;
+    margin-top: 3.00mm;
+}
+
+.gearlist {
+    margin-bottom: 6.00mm;
+}
+
+.gearlist .gear_underline  {
+    position: relative;
+}
+
+.gearlist input {
+    font-size: 9.00mm;
+    background-color: transparent;    
+
+}
+
+.gearlist .gear_underline::after{
+    content: "";
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 0.60mm;
+    left: 0;
+    bottom: 3.00mm;
+    background: black;
+    z-index: -1;
+}
+
+.grey {
+    color: #99a;
+}
+
+#hd {
+    width: 45%;
+    height: auto;
+    position: relative;
+}
+
+#hd label[for=hdtotal] {
+    position: absolute;
+    top: 0;
+    left: 6.00mm;
+    font-size: 6.00mm;
+}
+
+#hd label[for=hdcurr] {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 6.00mm;
+}
+
+#hdblock {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+}
+
+
+#hdcurr {
+    box-sizing: border-box;
+    position: relative;
+    display: inline-block;
+    border-radius: 9.00mm;
+    border: 0.90mm solid black;
+    background-color: transparent;
+    text-align: center;
+    font-size: 8m;
+    width: 100%;
+    height: 36.00mm;
+}
+
+#hdtotal {
+    position: absolute;
+    right: 3.00mm;
+    top: 0;
+    border: none;
+    padding: 0;
+    width: 15.00mm;
+    font-size: 9.00mm;
+    z-index: 1;
+    background: transparent;
+}
+
+.hp {
+    position: relative;
+    margin-bottom: 4.20mm;
+}
+
+#hpblock {
+    position: relative;
+    display: inline-block;    
+}
+
+#hpcurr {
+    box-sizing: border-box;
+    position: relative;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    border-radius: 15.00mm 15.00mm 0 0;
+    border: 0.90mm solid black;
+    background-color: transparent;
+    text-align: center;
+    font-size: 36.00mm;
+    width: 100%;
+    padding: 15.00mm;
+}
+
+.hp label[for=hpcurr] {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    font-size: 12.00mm;   
+}
+
+#hpmax {
+    border: 0.60mm solid black;
+    border-radius: 0 15.00mm 0 0;
+    font-size: 18.00mm;
+    width: 30.00mm;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: transparent;
+    text-align: center;
+    z-index: 10;
+}
+
+#hptemp {
+    box-sizing: border-box;
+    position: relative;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    border-radius: 0 0 15.00mm 15.00mm;
+    border: 0.90mm solid black;
+    background-color: transparent;
+    text-align: center;
+    font-size: 27.00mm;
+    width: 100%;
+    padding: 6.00mm 15.00mm;
+}
+
+.hp label[for=hptemp] {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    font-size: 9.00mm;
+}
+
+.hp label[for=hpmax] {
+    position: absolute;
+    top: 15.00mm;
+    right: 7.50mm;
+    font-size: 6.00mm;
+}
+
+input[type=text] {
+    font-family: 'Shalimar', cursive;
+    border: none;
+    padding: 0;
+}
+
+input[type=text]:focus {
+    outline: none;
+}
+
+#money {
+    position: relative;
+    left: -6.00mm;
+}
+
+#money .coin_box {
+    position: relative;
+    margin: 1.20mm;
+}
+
+#money .coin_box input {
+    margin-left: 6.90mm;
+    font-size: 7.50mm;
+    width: 12.00mm;
+    border: 0.60mm solid black;
+    background: white;
+    z-index: 10;
+    position: relative;
+    height: 10.50mm;
+    border-radius: 3.00mm;
+    padding: 0.60mm;
+    text-align: center;
+}
+
+#money .coin_box label{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 7.50mm;
+    border: 0.30mm solid black;
+    border-radius: 50% 0 0 50%;
+    margin: 0;
+    height: 7.50mm;
+    transform: translate(0, -50%);
+    background-color: white;
+    font-size: 4.50mm;
+}
+
+#name_block{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 6.00mm;
+}
+
+#name_block span{
+    position: relative;
+    box-sizing: border-box;
+}
+
+#name_block span::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 7.50mm;
+    width: 126.00mm;
+    height: 0.90mm;
+    background: black;
+}
+
+#name_block input[type=text] {
+    border: none;
+    font-size: 20.10mm;
+    width: 135.00mm;
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+
+#name_block label {
+    position: absolute;
+    top: 16.50mm;
+    left: 0.90mm;
+    font-size: 7.20mm;
+}
+
+#proficiency {
+    margin-bottom: 4.50mm;
+    position: relative;
+}
+
+#proficiency input[type=text]{
+    position: relative;
+    width: 15.00mm;
+    height: 15.00mm;
+    border: 0.90mm solid black;
+    border-radius: 50%;
+    font-size: 10.20mm;
+    text-align: center;
+    z-index: 10;
+}
+
+#proficiency label {
+    position: absolute;
+    right: 0;
+    border: 0.90mm solid black;
+    border-radius: 0 3.00mm 3.00mm 0;
+    font-size: 6.00mm;
+    top: 50%;
+    transform: translate(0, -50%);
+    padding: 1.80mm 15.90mm;
+}
+
+.prof {
+    position: absolute;
+    opacity: 0;
+    top: 1.05mm;
+    left: -1.05mm;
+    z-index: 10;
+    width: 4.20mm;
+    height: 4.20mm;
+}
+
+.proficiency-cover {
+    position: relative;
+    display: inline-block;
+    height: 3.00mm;
+    width: 3.00mm;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 0.60mm solid black;
+    top: 1.50mm;
+}
+
+.prof:checked ~ .proficiency-cover {
+    background-color: #444;
+    box-shadow: 0 0 0.90mm 0.90mm rgba(255, 255, 255, .8) inset;
+    opacity: 1;
+}
+
+#shield {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 31.50mm;
+    height: 39.00mm;
+}
+
+#shield svg {
+    position: relative;
+    z-index: 0;
+    width: 31.50mm;
+    height: 39.00mm;
+    top: -3.00mm;
+}
+
+.skill {
+    position: relative;
+}
+
+.skill input[type=text].skillbox {
+    width: 17%;
+    border: none;
+    font-size: 7.95mm;
+    position: relative;
+    text-align: center;
+}
+
+.skill input[type=text].skillbox::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 21.00mm;
+    left: 7%;
+    bottom: 9.00mm;
+    background: black;
+    z-index: -1;
+}
+
+.skill label {
+    font-size: 6.00mm;
+    position: relative;
+    display: inline-block;
+}
+
+.skill label::before {
+    content: "";
+    position: absolute;
+    left: -12.00mm;
+    bottom: 0.00mm;
+    width: 9.00mm;
+    height: 0.60mm;
+    background: black;
+}
+
+#skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 6.00mm;
+}
+
+#skill_label {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    font-size: 6.00mm;
+    margin-top: 2%;
+}
+
+.skill_list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1.50mm 3.00mm 0 4.50mm;
+    border: 0.90mm solid black;
+    border-radius: 9.00mm;
+    font-size: 0;
+    width: 78.00mm;
+    height: 100%;
+}
+
+#stats_block{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 255.00mm;
+}
+
+#topstats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#topstats input[type=text] {
+    height: 33.00mm;
+    width: 31.50mm;
+    box-sizing: border-box;
+    border-radius: 9.00mm;
+    border: 0.90mm solid black;
+    text-align: center;
+    font-size: 24.00mm;
+}
+
+#topstats span label {
+    position: absolute;
+    bottom: -9.00mm;
+    left: 0;
+    font-size: 4.50mm;
+    text-align: center;
+    width: 100%;
+    line-height: 6.00mm;
+}
+
+#topstats>span {
+    position: relative;
+}
