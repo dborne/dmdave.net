@@ -22,5 +22,5 @@ jobs:
             role-to-assume: arn:aws:iam::108626704866:role/dmdave_github_update
 
         - name: Deploy to S3
-          run: aws s3 sync . dmdave.net --delete --exclude '.git*'
+          run: aws s3 sync . s3://dmdave.net --delete --exclude '.git*'
           
