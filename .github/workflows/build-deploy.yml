@@ -15,12 +15,8 @@ jobs:
         - name: Set AWS Creds
           uses: aws-actions/configure-aws-credentials@v4
           with:
-            audience: sts.amazonaws.com
             aws-region: us-west-2
             role-to-assume: arn:aws:iam::108626704866:role/dmdave_github_update
-          permissions:
-            id-token: write
-            contents: read
 
         - name: Deploy to S3
           run: aws s3 sync . dmdave.net --delete --exclude '.git*'
