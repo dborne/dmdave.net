@@ -1,0 +1,32 @@
+quick-start:
+Human Mage - Archmaster Aodhan
+Elf Hunter - Orla Moonsilver
+Mallard Knight - Makander of Halfbay
+Halfling Thief - Krisanna the Bold
+Wolfkin Fighter - Bastonn Bloodjaw
+
+main book images:
+dwarf hunter p8
+
+
+Human fighter p10
+halfling mage p11
+dwarf fighterr p11
+human artisan p14
+halfling bard p15
+human fighter p16
+elf knight p18
+human mariner p20
+dwarf merchant p21
+mallard scholar p22
+halfling mage p63
+human mage p71
+
+downloaded
+red haired male human knight/fighter
+red haried female human/elf mage
+female halfling fighter
+mallard fighter
+cat rogue.fighter
+mallard thief
+

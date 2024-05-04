@@ -1,0 +1,39 @@
+body {
+    background: url("parchment.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.bonus-coupon {
+  font-family: "Englebert", cursive;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  width: 420px;
+  border-radius: 25px;
+  border: 3px dashed black;
+  margin-top: 200px;
+}
+
+.goblin-one-regular {
+  font-family: "Goblin One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.englebert-regular {
+  font-family: "Englebert", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.original-surfer-regular {
+  font-family: "Original Surfer", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.mynerve-regular {
+  font-family: "Mynerve", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
