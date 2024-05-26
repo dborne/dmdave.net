@@ -1,0 +1,72 @@
+Time
+Unit    Duration        Perform
+Round   10 sec          Round Rest
+Stretch 15 min          Explore Room/Stretch Rest
+Shift   6 hours         Hike 15 km / Shift Rest
+
+Rolling
+Roll Under system: Roll equal to or less than your target (skill or ability) to succeed
+1 "Dragon" is a critical success
+20 "Demon" is a citical failure
+
+If you roll less than or equal to your skill value, you succeed
+Boon: roll an additional d20 and choose best
+Bane: roll an additional d20 and choose worst
+multiples are possible and opposites cancel each other out one for one
+
+Pushing a Roll
+If you fail, but not critically, you can push the roll; reroll all dice and gain a condition of your choice
+
+Conditions
+Each stat has an associated condition. If you have a condition marked then all rolls associted with that stat have a Bane.
+If you need to suffer a condition you already have, choose another condition to gain instead.
+If you have all 6 conditions and suffer another, lose D6 WP; if you are also out of WP, lose D6 HP.
+You can heal one condition during a stretch rest and all conditions during a shift rest.
+
+Combat
+On your turn you can move and perform one action.
+Initiative: card order, lowest first. Flip you card after acting.
+
+Actions:
+Activate Ability - Use innate  or heroic ability
+Break Down Door - Auto hit - just roll weapon damage
+Cast Spell - Most spells are an action to cast.
+Dash - move up to your movement (double move)
+Disarm - opposed weapon skill roll (bane vs 2H weapon). On success weapon lands D6 meters in chosen direction.
+Dodge - after a successful attack, before damage is rolled you may attempt to dodge. This uses your action for this turn. Roll your Evade to dodge. If successful take no damage and, if desired, move 2m in any direction.
+Equip/Unequip Armor - Add or remove protective gear
+Find Weak Spot - with piercing weapon only, roll with bane and ignore armor if successful
+First Aid - use Healing skill on downed ally
+Grapple - opposed Brawling roll. On fail fall prone. On success tackle opponent to ground may make unarmed attacks with Boon that cannot be dodgeed or parried.
+Help - Help another character - they get a boon to their roll
+Melee Attack - Attack a foe within 2m (4m for long weapons). Can be Dodged or Parried.
+Parry - after a successful attack, before damage is rolled you may attempt to parry. This uses your action for this turn. Roll your weapon skill (or any str weapon skill for shield). If successful, damage is compared to the parrying weapon's durability. 
+Pick Lock - Sleight of Hands roll to open the lock
+Pick up Item - moe any item from 2m into your inventory
+Rally - use Persuade to keep downed ally going
+Ranged Attack - Attack a foe within the weapon's range. Can be Dodged or Parried but only with a shield.
+Round Rest - recover 1D6 WP, only available once per shift
+Topple - weapons skill vs Evade
+Use Item - Drink potion, or otherwise interact with objects within 2m
+
+Crits: (choose one)
+double damage dice of attack (not bonuses)
+piercing damage: ignore armor
+melee: second attack on another foe as a free action
+magic: double spell range
+magic: spell cost 0WP
+magic: cast again as free action, but with a bane
+
+
+Damage / Death:
+Subtract Armor Rating from damage. If all damage is negated, the attacking weapon suffers the damage.
+If your HP reaches zero you drop to the ground and start making CON saves each turn (like 5th ed). 3 success gain D6 HP, 3 Fails = death.
+Suffering additional damage counts as a failed death saving roll.
+Rally - another player can rally you - you can act as normal, but still make death saves
+Successful healing rolls will save you from death, you cannot roll healing on yourself for this, though.
+
+Magic:
+Magic tricks cost 1WP
+Spells cost 2WP per power level
+When at 0WP you can draw from your own body: Roll any die you like, take that as damage and also as WP that must be used immediately
+Reaction spells do not use your turn, unlike Parry and Dodge
