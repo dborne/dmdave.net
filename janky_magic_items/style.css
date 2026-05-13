@@ -1,0 +1,93 @@
+body {
+    font-family: 'Bangers', cursive;
+    font-size: 2.5rem;
+    background-color: #FAF4E3;
+}
+
+#patter {
+    width: 100%;
+    text-align: center;
+    color: #755;
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+
+.item {
+    width: 15em;
+    font-size: .6em;
+    border: .2em solid #555;
+    border-radius: 1em;
+    padding: .5em;
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    justify-content: space-between;
+}
+
+.item-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5em;
+}
+
+.item-info {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+.item-title {
+    color: #246;
+    font-family: 'Grenze Gotisch';
+    font-weight: bold;    
+    border-bottom: .15em solid #555;
+    padding-bottom: .5em;
+}
+
+.item-description {
+    color: #252525;
+    line-height: 85%;
+    font-family: 'Walter Turncoat';
+    font-size: .8em;
+    font-style: italic;
+    padding: 0 .2em;
+}
+
+.item-details {
+    color: #666;
+    line-height: 85%;
+    font-family: 'Walter Turncoat';
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.item-warnings {
+    color: #cc3333;
+    line-height: 85%;
+    font-family: 'Walter Turncoat';
+    font-size: .6em;
+    align-self: flex-end;
+}
+
+
+.question {
+    width: 80%;
+    text-align: center;
+    padding-left: 10%;
+    margin-bottom: 2%;
+}
+
+.question a:link {
+    text-decoration: none;
+    color: #557;
+}
+
+.question a:hover {
+    color: #55F;
+    text-decoration: underline;
+}
+
+.question a:visited {
+    color: #99D;
+}
