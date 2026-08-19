@@ -1,0 +1,415 @@
+/* Tavern Notice Board Aesthetic */
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=MedievalSharp&family=Grenze+Gotisch:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.about {
+    min-width: 70%;
+}
+
+.about p {
+    font-size: 2rem;
+    text-align: center;
+}
+
+body {
+    background: url('../img/wood-board.jpg') center center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    padding: 3rem 1.5rem;
+    font-family: 'Grenze Gotisch', serif;
+    color: #2b1810;
+}
+
+div#header {
+    grid-area: header;
+}
+
+/* Brass Plaque Header */
+.brass-plaque {
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    padding: 2rem 3rem;
+    background:
+        linear-gradient(135deg,
+            #9c7a3c 0%,
+            #b08d57 15%,
+            #9c7a3c 30%,
+            #895e1a 45%,
+            #9c7a3c 60%,
+            #b08d57 75%,
+            #9c7a3c 90%,
+            #895e1a 100%
+        );
+    border: 3px solid #8b7355;
+    border-radius: 8px;
+    box-shadow:
+        0 8px 16px rgba(0,0,0,.6),
+        inset 0 1px 0 rgba(255,255,255,.4),
+        inset 0 -2px 8px rgba(0,0,0,.3);
+    position: relative;
+    text-align: center;
+}
+
+/* Corner screws */
+.screw {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: radial-gradient(circle, #9c7a3c 0%, #b08d57 40%, #1a1a1a 100%);
+    border-radius: 50%;
+    box-shadow:
+        inset 0 2px 4px rgba(170,142,57,.9),
+        0 1px 2px rgba(255,255,255,.3);
+}
+
+/* Screw head slot */
+.screw::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    right: 20%;
+    height: 2px;
+    background: #895e1a;
+    transform: translateY(-50%);
+}
+
+.screw-tl {
+    top: 12px;
+    left: 12px;
+}
+
+.screw-tl::after{
+    transform: rotate(0deg);
+}
+
+.screw-tr {
+    top: 12px;
+    right: 12px;
+}
+
+.screw-bl {
+    bottom: 12px;
+    left: 12px;
+}
+
+.screw-br {
+    bottom: 12px;
+    right: 12px;
+}
+
+.brass-plaque h1 {
+    font-family: 'MedievalSharp', serif;
+    font-size: 3rem;
+    color: #3d2817;
+    margin: 0;
+    text-shadow:
+        1px 1px 0 rgba(255,255,255,.3),
+        0 2px 4px rgba(0,0,0,.4);
+    letter-spacing: 2px;
+    position: relative;
+}
+
+main {
+    margin: 0 5%;
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "games notes"
+        "footer footer";
+    grid-template-columns: 1fr 3fr;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+.content-area {
+    grid-area: notes;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    row-gap: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Parchment note styling */
+.games-section,
+.note,
+.note .box,
+.note > p {
+    //background: linear-gradient(135deg, #f4e8d0 0%, #e8d5b7 100%);
+    background-image: url('../img/parchment.jpg');
+    background-position: center;
+    background-size: cover;
+    padding: 2rem;
+    border-radius: 3px;
+    position: relative;
+    border: 1px solid #c9b896;
+}
+
+.games-section {
+    grid-area: games;
+    transform: rotate(-1deg);
+    min-height: 400px;
+    box-shadow:
+        0 2px 8px rgba(0,0,0,.4),
+        inset 0 1px 0 rgba(255,255,255,.3);
+}
+
+.note {
+    flex: 0 1 47%;
+    transform: rotate(-1deg);
+    padding: 0;
+    background: transparent;
+    border: none;
+}
+
+.note .box,
+.note > p {
+    margin: 0;
+    box-shadow:
+        0 2px 8px rgba(0,0,0,.4),
+        inset 0 1px 0 rgba(255,255,255,.3);
+}
+
+.note:nth-child(even) {
+    transform: rotate(2deg) translate(8px, -5px);
+    margin-top: -10px;
+}
+
+.note:nth-child(3n) {
+    transform: rotate(-3deg) translate(-3px, 15px);
+    margin-top: 30px;
+}
+
+.note:nth-child(4n) {
+    transform: rotate(-1deg) translate(5px, -8px);
+    margin-top: 5px;
+}
+
+.note:nth-child(5n) {
+    transform: rotate(3deg)  translate(-7px, 12px);
+    margin-top: 25px;
+}
+
+.note:nth-child(6n) {
+    transform: rotate(-3deg) translate(10px, -3px);
+    margin-top: -5px;
+}
+
+/* Shadow effect using before/after on .note wrapper */
+.note::before,
+.note::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    box-shadow: 0 21px 11px rgba(0, 0, 0, 1);
+    bottom: 15px;
+    width: 50%;
+    height: 20%;
+}
+
+.note::before {
+    left: 10px;
+    transform: skew(-8deg) rotate(-3deg);
+}
+
+.note::after {
+    right: 10px;
+    transform: skew(8deg) rotate(3deg);
+}
+
+.note:hover::before,
+.note:hover::after {
+  box-shadow: 0 17px 14px rgba(0,0,0,1);
+}
+
+.note:hover::before {
+  left: 5px;
+}
+
+.note:hover::after {
+  right: 5px;
+}
+
+/* Pushpin effect - only on elements with .pin class */
+.pin::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    background: radial-gradient(circle, #8b4513 0%, #654321 70%, #4a3220 100%);
+    border-radius: 50%;
+    box-shadow:
+        0 2px 4px rgba(0,0,0,.5),
+        inset -2px -2px 3px rgba(0,0,0,.3),
+        inset 2px 2px 3px rgba(255,255,255,.2);
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+/* Vary pushpin positions */
+.games-section.pin .box::before,
+.games-section.pin > p::before {
+    left: 20%;
+}
+
+.note:nth-child(even) .pin::before {
+    left: 30%;
+}
+
+.note:nth-child(3n) .pin::before {
+    left: 70%;
+}
+
+.note:nth-child(4n) .pin::before {
+    left: 40%;
+}
+
+.note:nth-child(5n) .pin::before {
+    left: 65%;
+}
+
+/* Games section - larger parchment on the left */
+.games-section h4 {
+    font-size: 2rem;
+    color: #8b0000;
+    margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,.1);
+    letter-spacing: 1px;
+    border-bottom: 1px #8b0000 solid;
+    position: relative;
+    z-index: 1;
+}
+
+.game-entry {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px dashed #c9b896;
+    position: relative;
+    z-index: 1;
+}
+
+.game-entry:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.game-entry h5 {
+    font-family: 'Bangers', cursive;
+    font-size: 1.4rem;
+    color: #654321;
+    margin-bottom: 0.75rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,.1);
+}
+
+.game-entry ul {
+    position: relative;
+    z-index: 1;
+}
+
+/* Text styling */
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+h4 {
+    font-size: 1.8rem;
+    color: #8b0000;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,.1);
+    letter-spacing: 1px;
+}
+
+/* Lists */
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+li::before {
+    content: '⚔';
+    position: absolute;
+    left: 0;
+    color: #8b4513;
+    font-size: 1.2rem;
+}
+
+/* Links */
+a {
+    color: #8b0000;
+    text-decoration: none;
+    border-bottom: 2px solid #8b0000;
+    transition: all 0.2s;
+    font-weight: 600;
+}
+
+a:hover {
+    color: #cd5c5c;
+    border-bottom-color: #cd5c5c;
+    background: rgba(139, 0, 0, 0.05);
+}
+
+.note a {
+    color: inherit;
+    border: none;
+}
+
+.note a:hover {
+    color: #cd5c5c;
+}
+
+/* Horizontal rules - rope divider */
+hr {
+    border: none;
+    height: 3px;
+    background: repeating-linear-gradient(
+        90deg,
+        #8b7355 0px,
+        #6b5845 2px,
+        #8b7355 4px,
+        #6b5845 6px
+    );
+    margin: 1.5rem 0;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.3);
+}
+
+/* Parchment texture overlay */
+.games-section::after,
+.note .box::after,
+.note > p::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' /%3E%3CfeColorMatrix values='0 0 0 0 0, 0 0 0 0 0, 0 0 0 0 0, 0 0 0 0.02 0'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.5'/%3E%3C/svg%3E");
+    pointer-events: none;
+    border-radius: 3px;
+    opacity: 0.3;
+}
