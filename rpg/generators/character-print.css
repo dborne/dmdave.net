@@ -1,5 +1,5 @@
 
-#abilities {
+.abilities {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -42,29 +42,29 @@
     left: 25%;
 }
 
-#acblock {
+.acblock {
     position: relative;
     display: inline-block;
 }
 
-#acblock input#ac[type=text] {
+.acblock input.char-ac[type=text] {
     border: none;
     position: relative;
     z-index: 10;
     background: transparent;
 }
 
-#gear>div {
+.gear>div {
     margin: 0 1mm 0 2mm;   
 }
 
-#attackblock{
+.attackblock{
     padding: 1mm 1mm 0 1mm;
     border: .3mm solid black;
     border-radius: 3mm;
 }   
 
-#attackblock span {
+.attackblock span {
     display: inline-block;
     width: 20%;
     font-size: 1.3mm;
@@ -74,17 +74,17 @@
     flex: 1;
 }
 
-#attackblock span.name {
+.attackblock span.name {
     flex: 4;
 }
 
-#attackblock div.attack_flex {
+.attackblock div.attack_flex {
     display: flex;
     flex-direction: row wrap;
     justify-content: space-between;
 }
 
-#attackblock .attack input {
+.attackblock .attack input {
     background-color: #ccc;
     color: black;
     text-align: center;
@@ -96,7 +96,7 @@
     margin: 0 .5mm;
 }
 
-#attackblock input.desc {
+.attackblock input.desc {
     font-size: 1.6mm;
     margin: 0 .5mm 1.5mm .5mm;
     background-color: #eee;
@@ -105,11 +105,11 @@
     text-align: left;
 }
 
-#attackblock input.name {
+.attackblock input.name {
     flex: 4;
 }
 
-#attackblock label {
+.attackblock label {
     display: inline-block;
     text-align: center;
     width: 100%;
@@ -122,9 +122,50 @@ body {
     background-color: #FFFDFA;
 }
 
-#charsheet_5e {
+@page {
+    size: landscape;
+    margin: 8mm;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Hide UI controls */
+.loading-overlay,
+.error-message,
+#generate-controls,
+.config-modal {
+    display: none !important;
+}
+
+/* Grid layout for 4 per page */
+#charsheet-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 3mm;
+    width: 100%;
+    height: 100%;
+}
+
+.charsheet {
     height: 100mm;
     width: 135mm;
+    margin: 0;
+    page-break-inside: avoid;
+    transform: scale(0.98);
+    transform-origin: top left;
+}
+
+/* Page break after every 4th sheet */
+.charsheet:nth-child(4n) {
+    page-break-after: always;
+}
+
+.charsheet:last-child {
+    page-break-after: auto;
 }
 
 .checkbox-holder {
@@ -132,7 +173,7 @@ body {
     top: .6mm;
 }
 
-#combat {
+.combat {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -140,7 +181,7 @@ body {
     width: 40mm;
 }
 
-#deathsave {
+.deathsave {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -155,7 +196,7 @@ body {
     padding: 0.5mm;
 }
 
-#deathsave>label {
+.deathsave>label {
     display: inline-block;
     position: absolute;
     bottom: 0;
@@ -187,7 +228,7 @@ body {
     background: gray;
 }
 
-#description {
+.description {
     position: relative;
     border: .3mm solid black;
     border-radius: 3mm;
@@ -195,7 +236,7 @@ body {
     
 }
 
-#description label {
+.description label {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -204,7 +245,7 @@ body {
     font-size: 2mm;
 }
 
-#description textarea {
+.description textarea {
     font-family: 'Shalimar', cursive;
     font-size: 3.5mm;
     padding: 1.2mm;
@@ -217,7 +258,7 @@ body {
     background-color: transparent;
 }
 
-#description textarea:focus {
+.description textarea:focus {
     outline: none;
 }
 
@@ -250,7 +291,7 @@ body {
     opacity: 1;
 }
 
-#gear {
+.gear {
     flex: 2;
     display: flex;
     flex-direction: column;
@@ -258,7 +299,7 @@ body {
     
 }
 
-#gearblock {
+.gearblock {
     padding: 1mm;
     border: .3mm solid black;
     border-radius: 3mm;    
@@ -269,7 +310,7 @@ body {
 
 }
 
-#gearblock label {
+.gearblock label {
     display: inline-block;
     box-sizing: border-box;
     position: absolute;
@@ -311,19 +352,19 @@ body {
     color: #99a;
 }
 
-#hd {
+.hd {
     width: 45%;
     height: auto;
     position: relative;
 }
 
-#hd label[for=hdtotal] {
+.hd label[for=hdtotal] {
     position: absolute;
     top: 0;
     left: 2mm;
 }
 
-#hd label[for=hdcurr] {
+.hd label[for=hdcurr] {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -331,7 +372,7 @@ body {
     text-align: center;
 }
 
-#hdblock {
+.hdblock {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -339,7 +380,7 @@ body {
 }
 
 
-#hdcurr {
+.char-hdcurr {
     box-sizing: border-box;
     position: relative;
     display: inline-block;
@@ -352,7 +393,7 @@ body {
     height: 12mm;
 }
 
-#hdtotal {
+.char-hdtotal {
     position: absolute;
     right: 1mm;
     top: 0;
@@ -367,12 +408,12 @@ body {
     margin-bottom: 10px;
 }
 
-#hpblock {
+.hpblock {
     position: relative;
     display: inline-block;    
 }
 
-#hpcurr {
+.char-hpcurr {
     box-sizing: border-box;
     position: relative;
     display: inline-block;
@@ -385,22 +426,23 @@ body {
     font-size: 12mm;
     width: 100%;
     padding: 5mm;
+    height: 30mm;
 }
 
-#hpcurr:focus {
+.char-hpcurr:focus {
     outline: none;
 }
 
-.hp label[for=hpcurr] {
+.hp:first-child label:nth-of-type(2) {
     position: absolute;
     bottom: 0;
     left: 0;
     text-align: center;
     width: 100%;
-    font-size: 4mm;   
+    font-size: 4mm;
 }
 
-#hpmax {
+.char-hpmax {
     border: .2mm solid black;
     border-radius: 0 5mm 0 0;
     font-size: 6mm;
@@ -413,11 +455,11 @@ body {
     z-index: 10;
 }
 
-#hpmax:focus {
+.char-hpmax:focus {
     outline: none;
 }
 
-#hptemp {
+.char-hptemp {
     box-sizing: border-box;
     position: relative;
     display: inline-block;
@@ -430,22 +472,23 @@ body {
     font-size: 9mm;
     width: 100%;
     padding: 2mm 5mm;
+    height: 22mm;
 }
 
-#hptemp:focus {
+.char-hptemp:focus {
     outline: none;
 }
 
-.hp label[for=hptemp] {
+.hp:last-child label {
     position: absolute;
     bottom: 0;
     left: 0;
     text-align: center;
     width: 100%;
-    font-size: 3mm;   
+    font-size: 3mm;
 }
 
-.hp label[for=hpmax] {
+.hp:first-child label:first-of-type {
     position: absolute;
     top: 5mm;
     right: 2.5mm;
@@ -462,16 +505,33 @@ input[type=text]:focus {
     outline: none;
 }
 
-#money {
+/* HP and HD input borders - override general input rule */
+input.char-hpcurr {
+    border: 0.3mm solid black;
+}
+
+input.char-hpmax {
+    border: 0.2mm solid black;
+}
+
+input.char-hptemp {
+    border: 0.3mm solid black;
+}
+
+input.char-hdcurr {
+    border: 0.3mm solid black;
+}
+
+.money {
     position: relative;
     left: -2mm;
 }
 
-#money .coin_box {
+.money .coin_box {
     position: relative;
 }
 
-#money .coin_box input {
+.money .coin_box input {
     margin-left: 2.3mm;
     font-size: 2.5mm;
     width: 7mm;
@@ -485,7 +545,7 @@ input[type=text]:focus {
     text-align: center;
 }
 
-#money .coin_box label{
+.money .coin_box label{
     position: absolute;
     top: 50%;
     left: 0;
@@ -498,19 +558,19 @@ input[type=text]:focus {
     background-color: white;
 }
 
-#name_block{
+.name_block{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 2mm;
 }
 
-#name_block span{
+.name_block span{
     position: relative;
     box-sizing: border-box;
 }
 
-#name_block span::before {
+.name_block span::before {
     content: "";
     position: absolute;
     left: 0;
@@ -520,30 +580,30 @@ input[type=text]:focus {
     background: black;
 }
 
-#name_block input[type=text] {
+.name_block input[type=text] {
     border: none;
     font-size: 6.7mm;
     width: 45mm;
     box-sizing: border-box;
 }
 
-#name_block input[type=text]:focus {
+.name_block input[type=text]:focus {
     outline: none;
 }
 
-#name_block label {
+.name_block label {
     position: absolute;
     top: 5.5mm;
     left: .3mm;
     font-size: 2.4mm;
 }
 
-#proficiency {
+.proficiency {
     margin-bottom: 1.5mm;
     position: relative;
 }
 
-#proficiency input[type=text]{
+.proficiency input[type=text]{
     position: relative;
     width: 5mm;
     height: 5mm;
@@ -554,11 +614,11 @@ input[type=text]:focus {
     z-index: 10;
 }
 
-#proficiency input[type=text]:focus{
+.proficiency input[type=text]:focus{
     outline: none;
 }
 
-#proficiency label {
+.proficiency label {
     position: absolute;
     right: 0;
     border: .3mm solid black;
@@ -596,7 +656,7 @@ input[type=text]:focus {
     opacity: 1;
 }
 
-#shield {
+.shield {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -605,7 +665,7 @@ input[type=text]:focus {
     height: 13mm;
 }
 
-#shield svg {
+.shield svg {
     position: relative;
     z-index: 0;
     width: 11.5mm;
@@ -656,14 +716,14 @@ input[type=text]:focus {
     background: black;
 }
 
-#skills {
+.skills {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin-left: 2mm;
 }
 
-#skill_label {
+.skill_label {
     display: inline-block;
     text-align: center;
     width: 100%;
@@ -683,7 +743,7 @@ input[type=text]:focus {
     height: 100%;
 }
 
-#stats_block{
+.stats_block{
     position: relative;
     display: flex;
     flex-direction: row;
@@ -691,14 +751,14 @@ input[type=text]:focus {
     height: 85mm;
 }
 
-#topstats {
+.topstats {
     margin-bottom: 15px;    
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-#topstats input[type=text] {
+.topstats input[type=text] {
     height: 11mm;
     width: 12mm;
     box-sizing: border-box;
@@ -708,11 +768,11 @@ input[type=text]:focus {
     font-size: 8mm;
 }
 
-#topstats input[type=text]:focus {
+.topstats input[type=text]:focus {
     outline: none;
 }
 
-#topstats span label {
+.topstats span label {
     position: absolute;
     bottom: -3mm;
     left: 0;
@@ -722,7 +782,7 @@ input[type=text]:focus {
     line-height: 5px;
 }
 
-#topstats>span {
+.topstats>span {
     position: relative;
 }
 

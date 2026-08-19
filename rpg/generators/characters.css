@@ -1,4 +1,4 @@
-#abilities {
+.abilities {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -37,29 +37,29 @@
     left: 25%;
 }
 
-#acblock {
+.acblock {
     position: relative;
     display: inline-block;
 }
 
-#acblock input#ac[type=text] {
+.acblock input.char-ac[type=text] {
     border: none;
     position: relative;
     z-index: 10;
     background: transparent;
 }
 
-#gear>div {
+.gear>div {
     margin: 0 3.00mm 0 6.00mm;   
 }
 
-#attackblock{
+.attackblock{
     padding: 3.00mm 3.00mm 0 3.00mm;
     border: 0.90mm solid black;
     border-radius: 9.00mm;
 }   
 
-#attackblock span {
+.attackblock span {
     display: inline-block;
     width: 20%;
     font-size: 3.90mm;
@@ -69,18 +69,18 @@
     flex: 1;
 }
 
-#attackblock span.name {
+.attackblock span.name {
     flex: 4;
 }
 
-#attackblock div.attack_flex {
+.attackblock div.attack_flex {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-#attackblock .attack input {
+.attackblock .attack input {
     background-color: #ccc;
     color: black;
     text-align: center;
@@ -92,7 +92,7 @@
     margin: 0 1.50mm;
 }
 
-#attackblock input.desc {
+.attackblock input.desc {
     font-size: 4.80mm;
     margin: 1.50mm 1.50mm 4.50mm 1.50mm;
     background-color: #eee;
@@ -101,12 +101,12 @@
     text-align: left;
 }
 
-#attackblock input.name {
+.attackblock input.name {
     flex: 4;
     text-transform: capitalize;
 }
 
-#attackblock label {
+.attackblock label {
     display: inline-block;
     text-align: center;
     width: 100%;
@@ -119,9 +119,10 @@ body {
     background-color: #FFFDFA;
 }
 
-#charsheet_5e {
+.charsheet {
     height: 300.00mm;
     width: 405.00mm;
+    margin-bottom: 2rem;
 }
 
 .checkbox-holder {
@@ -129,7 +130,7 @@ body {
     top: 1.80mm;
 }
 
-#combat {
+.combat {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -137,7 +138,7 @@ body {
     width: 120.00mm;
 }
 
-#deathsave {
+.deathsave {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -152,7 +153,7 @@ body {
     padding: 1.50mm;
 }
 
-#deathsave>label {
+.deathsave>label {
     display: inline-block;
     position: absolute;
     bottom: 0;
@@ -184,7 +185,7 @@ body {
     background: gray;
 }
 
-#description {
+.description {
     position: relative;
     border: 0.90mm solid black;
     border-radius: 9.00mm;
@@ -192,7 +193,7 @@ body {
     
 }
 
-#description label {
+.description label {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -201,7 +202,7 @@ body {
     font-size: 6.00mm;
 }
 
-#description textarea {
+.description textarea {
     font-family: 'Shalimar', cursive;
     font-size: 10.50mm;
     padding: 3.60mm;
@@ -214,7 +215,7 @@ body {
     background-color: transparent;
 }
 
-#description textarea:focus {
+.description textarea:focus {
     outline: none;
 }
 
@@ -247,7 +248,7 @@ body {
     opacity: 1;
 }
 
-#gear {
+.gear {
     flex: 2;
     display: flex;
     flex-direction: column;
@@ -255,7 +256,7 @@ body {
     
 }
 
-#gearblock {
+.gearblock {
     padding: 3.00mm;
     border: 0.90mm solid black;
     border-radius: 9.00mm;
@@ -265,7 +266,7 @@ body {
     position: relative;
 }
 
-#gearblock label {
+.gearblock label {
     display: inline-block;
     box-sizing: border-box;
     position: absolute;
@@ -307,20 +308,20 @@ body {
     color: #99a;
 }
 
-#hd {
+.hd {
     width: 45%;
     height: auto;
     position: relative;
 }
 
-#hd label[for=hdtotal] {
+.hd label[for=hdtotal] {
     position: absolute;
     top: 0;
     left: 6.00mm;
     font-size: 6.00mm;
 }
 
-#hd label[for=hdcurr] {
+.hd label[for=hdcurr] {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -329,7 +330,7 @@ body {
     font-size: 6.00mm;
 }
 
-#hdblock {
+.hdblock {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -337,7 +338,7 @@ body {
 }
 
 
-#hdcurr {
+.char-hdcurr {
     box-sizing: border-box;
     position: relative;
     display: inline-block;
@@ -350,7 +351,7 @@ body {
     height: 36.00mm;
 }
 
-#hdtotal {
+.char-hdtotal {
     position: absolute;
     right: 3.00mm;
     top: 0;
@@ -367,12 +368,12 @@ body {
     margin-bottom: 4.20mm;
 }
 
-#hpblock {
+.hpblock {
     position: relative;
     display: inline-block;    
 }
 
-#hpcurr {
+.char-hpcurr {
     box-sizing: border-box;
     position: relative;
     display: inline-block;
@@ -385,18 +386,19 @@ body {
     font-size: 36.00mm;
     width: 100%;
     padding: 15.00mm;
+    height: 90.00mm;
 }
 
-.hp label[for=hpcurr] {
+.hp:first-child label:nth-of-type(2) {
     position: absolute;
     bottom: 0;
     left: 0;
     text-align: center;
     width: 100%;
-    font-size: 12.00mm;   
+    font-size: 12.00mm;
 }
 
-#hpmax {
+.char-hpmax {
     border: 0.60mm solid black;
     border-radius: 0 15.00mm 0 0;
     font-size: 18.00mm;
@@ -409,7 +411,7 @@ body {
     z-index: 10;
 }
 
-#hptemp {
+.char-hptemp {
     box-sizing: border-box;
     position: relative;
     display: inline-block;
@@ -422,9 +424,10 @@ body {
     font-size: 27.00mm;
     width: 100%;
     padding: 6.00mm 15.00mm;
+    height: 65.00mm;
 }
 
-.hp label[for=hptemp] {
+.hp:last-child label {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -433,7 +436,7 @@ body {
     font-size: 9.00mm;
 }
 
-.hp label[for=hpmax] {
+.hp:first-child label:first-of-type {
     position: absolute;
     top: 15.00mm;
     right: 7.50mm;
@@ -450,17 +453,34 @@ input[type=text]:focus {
     outline: none;
 }
 
-#money {
+/* HP and HD input borders - override general input rule */
+input.char-hpcurr {
+    border: 0.90mm solid black;
+}
+
+input.char-hpmax {
+    border: 0.60mm solid black;
+}
+
+input.char-hptemp {
+    border: 0.90mm solid black;
+}
+
+input.char-hdcurr {
+    border: 0.90mm solid black;
+}
+
+.money {
     position: relative;
     left: -6.00mm;
 }
 
-#money .coin_box {
+.money .coin_box {
     position: relative;
     margin: 1.20mm;
 }
 
-#money .coin_box input {
+.money .coin_box input {
     margin-left: 6.90mm;
     font-size: 7.50mm;
     width: 12.00mm;
@@ -474,7 +494,7 @@ input[type=text]:focus {
     text-align: center;
 }
 
-#money .coin_box label{
+.money .coin_box label{
     position: absolute;
     top: 50%;
     left: 0;
@@ -488,19 +508,19 @@ input[type=text]:focus {
     font-size: 4.50mm;
 }
 
-#name_block{
+.name_block{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 6.00mm;
 }
 
-#name_block span{
+.name_block span{
     position: relative;
     box-sizing: border-box;
 }
 
-#name_block span::before {
+.name_block span::before {
     content: "";
     position: absolute;
     left: 0;
@@ -510,7 +530,7 @@ input[type=text]:focus {
     background: black;
 }
 
-#name_block input[type=text] {
+.name_block input[type=text] {
     border: none;
     font-size: 20.10mm;
     width: 135.00mm;
@@ -518,19 +538,19 @@ input[type=text]:focus {
     text-transform: capitalize;
 }
 
-#name_block label {
+.name_block label {
     position: absolute;
     top: 16.50mm;
     left: 0.90mm;
     font-size: 7.20mm;
 }
 
-#proficiency {
+.proficiency {
     margin-bottom: 4.50mm;
     position: relative;
 }
 
-#proficiency input[type=text]{
+.proficiency input[type=text]{
     position: relative;
     width: 15.00mm;
     height: 15.00mm;
@@ -541,7 +561,7 @@ input[type=text]:focus {
     z-index: 10;
 }
 
-#proficiency label {
+.proficiency label {
     position: absolute;
     right: 0;
     border: 0.90mm solid black;
@@ -579,7 +599,7 @@ input[type=text]:focus {
     opacity: 1;
 }
 
-#shield {
+.shield {
     position: absolute;
     top: 0;
     left: 0;
@@ -588,7 +608,7 @@ input[type=text]:focus {
     height: 39.00mm;
 }
 
-#shield svg {
+.shield svg {
     position: relative;
     z-index: 0;
     width: 31.50mm;
@@ -635,14 +655,14 @@ input[type=text]:focus {
     background: black;
 }
 
-#skills {
+.skills {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin-left: 6.00mm;
 }
 
-#skill_label {
+.skill_label {
     display: inline-block;
     text-align: center;
     width: 100%;
@@ -662,7 +682,7 @@ input[type=text]:focus {
     height: 100%;
 }
 
-#stats_block{
+.stats_block{
     position: relative;
     display: flex;
     flex-direction: row;
@@ -670,13 +690,13 @@ input[type=text]:focus {
     height: 255.00mm;
 }
 
-#topstats {
+.topstats {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-#topstats input[type=text] {
+.topstats input[type=text] {
     height: 33.00mm;
     width: 31.50mm;
     box-sizing: border-box;
@@ -686,7 +706,7 @@ input[type=text]:focus {
     font-size: 24.00mm;
 }
 
-#topstats span label {
+.topstats span label {
     position: absolute;
     bottom: -9.00mm;
     left: 0;
@@ -696,6 +716,331 @@ input[type=text]:focus {
     line-height: 6.00mm;
 }
 
-#topstats>span {
+.topstats>span {
     position: relative;
+}
+
+/* Loading Overlay */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.loading-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.loading-spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-content p {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Error Message */
+.error-message {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    text-align: center;
+}
+
+.error-text {
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+}
+
+.btn-retry {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+
+.btn-retry:hover {
+    background-color: #c82333;
+}
+
+/* Generate Button */
+#generate-controls {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.quantity-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-size: 1rem;
+}
+
+.quantity-label input[type="number"] {
+    width: 60px;
+    padding: 0.25rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.btn-config {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s;
+}
+
+.btn-config:hover {
+    background-color: #5a6268;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-1px);
+}
+
+.btn-generate {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s;
+}
+
+.btn-generate:hover:not(:disabled) {
+    background-color: #218838;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-1px);
+}
+
+.btn-generate:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Config Modal */
+.config-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1002;
+}
+
+.config-content {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    max-width: 700px;
+    width: 90%;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.config-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.config-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    color: #333;
+}
+
+.config-close {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    line-height: 1;
+    color: #6c757d;
+    cursor: pointer;
+    padding: 0;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.config-close:hover {
+    color: #000;
+}
+
+.config-body {
+    padding: 1.5rem;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.config-section {
+    margin-bottom: 2rem;
+}
+
+.config-section:last-child {
+    margin-bottom: 0;
+}
+
+.config-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.config-section-header h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    color: #333;
+}
+
+.config-section-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn-small {
+    background-color: #e9ecef;
+    color: #495057;
+    border: 1px solid #ced4da;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: all 0.2s;
+}
+
+.btn-small:hover {
+    background-color: #dee2e6;
+}
+
+.checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 0.75rem;
+}
+
+.config-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-size: 1rem;
+}
+
+.config-checkbox:hover {
+    background-color: #f8f9fa;
+}
+
+.config-checkbox input[type="checkbox"] {
+    cursor: pointer;
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.config-checkbox span {
+    text-transform: capitalize;
+}
+
+.config-footer {
+    padding: 1.5rem;
+    border-top: 1px solid #dee2e6;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-save {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s;
+}
+
+.btn-save:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-1px);
+}
+
+/* Utility */
+.hidden {
+    display: none !important;
 }
