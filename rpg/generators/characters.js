@@ -112,7 +112,7 @@ function renderAttacks(attacks) {
       <div class="attack_flex">
         <input class="name" type="text" value="${attack.name}">
         <input type="text" value="${attack.atk_bonus}">
-        <input type="text" value="${attack.damage}">
+        <input class="attack-damage" type="text" value="${attack.damage}">
       </div>
       <input class="desc" type="text" value="${attack.properties || ''}">
     </div>
@@ -267,7 +267,7 @@ function createCharacterSheet() {
                     <label>equipment</label>
                 </div>
                 <div class="description">
-                    <textarea></textarea>
+                    <textarea spellcheck="false"></textarea>
                     <label>description</label>
                 </div>
             </span>
@@ -340,10 +340,12 @@ function renderRaceCheckboxes() {
   container.innerHTML = state.availableRaces.map(race => {
     const checked = state.selectedRaces.includes(race) ? 'checked' : '';
     return `
-      <label class="config-checkbox">
-        <input type="checkbox" value="${race}" ${checked} data-type="race">
-        <span>${race}</span>
-      </label>
+      <div class="config-checkbox">
+        <input type="checkbox" id="${race}" value="${race}" ${checked} data-type="race">
+        <label for="${race}">
+          <span>${race}</span>
+        </label>
+      </div>
     `;
   }).join('');
 }
@@ -359,10 +361,12 @@ function renderClassCheckboxes() {
   container.innerHTML = state.availableClasses.map(className => {
     const checked = state.selectedClasses.includes(className) ? 'checked' : '';
     return `
-      <label class="config-checkbox">
-        <input type="checkbox" value="${className}" ${checked} data-type="class">
-        <span>${className}</span>
-      </label>
+      <div class="config-checkbox">
+        <input type="checkbox" id="${className}" value="${className}" ${checked} data-type="class">
+        <label for="${className}">
+          <span>${className}</span>
+        </label>
+      </div>
     `;
   }).join('');
 }

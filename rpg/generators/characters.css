@@ -113,6 +113,11 @@
     font-size: 6.00mm;
 }
 
+.attackblock input.attack-damage {
+    font-size: 1.4rem;
+    text-transform: none;
+}
+
 body {
     font-family: 'Alegreya Sans SC', sans-serif;
     font-size: 0;
@@ -123,6 +128,8 @@ body {
     height: 300.00mm;
     width: 405.00mm;
     margin-bottom: 2rem;
+    border: .2rem solid black;
+    border-radius: 2rem;
 }
 
 .checkbox-holder {
@@ -178,9 +185,9 @@ body {
 .deathboxes label::after  {
     content: "";
     position: absolute;
-    right: -17.25mm;
+    right: -21.25mm;
     top: 50%;
-    width: 12.90mm;
+    width: 14.9mm;
     height: 0.90mm;
     background: gray;
 }
@@ -203,13 +210,13 @@ body {
 }
 
 .description textarea {
-    font-family: 'Shalimar', cursive;
-    font-size: 10.50mm;
-    padding: 3.60mm;
+    font-family: 'Kalam', cursive;
+    font-size: 1.4rem;
+    padding: 0.8rem;
     box-sizing: border-box;
     resize: none;
     width: 100%;
-    height: 100%;
+    height: 85%;
     overflow: hidden;
     border: none;
     background-color: transparent;
@@ -254,6 +261,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     
+    row-gap: 1rem;
 }
 
 .gearblock {
@@ -262,7 +270,7 @@ body {
     border-radius: 9.00mm;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: ;
     position: relative;
 }
 
@@ -280,28 +288,23 @@ body {
 
 .gearlist {
     margin-bottom: 6.00mm;
-}
-
-.gearlist .gear_underline  {
-    position: relative;
+    width: 100%;
 }
 
 .gearlist input {
-    font-size: 9.00mm;
     background-color: transparent;    
-
 }
 
-.gearlist .gear_underline::after{
-    content: "";
+.gear_underline {
     display: block;
     position: relative;
+    padding: .3rem 0;
+}
+
+.gear_underline > input[type="text"] {
+    font-size: 1.25rem;
     width: 100%;
-    height: 0.60mm;
-    left: 0;
-    bottom: 3.00mm;
-    background: black;
-    z-index: -1;
+    border-bottom: .15rem solid black;
 }
 
 .grey {
@@ -438,13 +441,13 @@ body {
 
 .hp:first-child label:first-of-type {
     position: absolute;
-    top: 15.00mm;
+    top: 4.5rem;
     right: 7.50mm;
     font-size: 6.00mm;
 }
 
 input[type=text] {
-    font-family: 'Shalimar', cursive;
+    font-family: 'Kalam', cursive;
     border: none;
     padding: 0;
 }
@@ -512,37 +515,41 @@ input.char-hdcurr {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 6.00mm;
+    margin-bottom: 1rem;
+    padding: 0 1.1rem;
 }
 
 .name_block span{
     position: relative;
     box-sizing: border-box;
+    /*! border: 1px solid red; */
+    margin: 0.3rem;
 }
 
 .name_block span::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 7.50mm;
-    width: 126.00mm;
-    height: 0.90mm;
-    background: black;
+    /*! content: ""; */
+    /*! position: absolute; */
+    /*! left: 0; */
+    /*! bottom: 7.50mm; */
+    /*! width: 126.00mm; */
+    /*! height: 0.90mm; */
+    /*! background: black; */
 }
 
 .name_block input[type=text] {
     border: none;
-    font-size: 20.10mm;
-    width: 135.00mm;
-    box-sizing: border-box;
+    font-size: 3.4rem;
+    /*! width: 108mm; */
+    /*! box-sizing: border-box; */
     text-transform: capitalize;
+    field-sizing: content;
 }
 
 .name_block label {
     position: absolute;
-    top: 16.50mm;
-    left: 0.90mm;
+    top: 4rem;
     font-size: 7.20mm;
+    left: 0.2rem;
 }
 
 .proficiency {
@@ -708,12 +715,12 @@ input.char-hdcurr {
 
 .topstats span label {
     position: absolute;
-    bottom: -9.00mm;
+    bottom: -1.5rem;
     left: 0;
     font-size: 4.50mm;
     text-align: center;
     width: 100%;
-    line-height: 6.00mm;
+    line-height: 6mm;
 }
 
 .topstats>span {
@@ -985,7 +992,6 @@ input.char-hdcurr {
 .checkbox-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 0.75rem;
 }
 
 .config-checkbox {
@@ -1008,6 +1014,7 @@ input.char-hdcurr {
     cursor: pointer;
     width: 1.25rem;
     height: 1.25rem;
+    min-width: 1.25rem;
 }
 
 .config-checkbox span {

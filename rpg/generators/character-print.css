@@ -116,6 +116,11 @@
     font-size: 2mm;
 }
 
+.attackblock input.attack-damage {
+    font-size: .4rem;
+    text-transform: none;
+}
+
 body {
     font-family: 'Alegreya Sans SC', sans-serif;
     font-size: 10px;
@@ -246,8 +251,8 @@ body {
 }
 
 .description textarea {
-    font-family: 'Shalimar', cursive;
-    font-size: 3.5mm;
+    font-family: 'Kalam', cursive;
+    font-size: .5rem;
     padding: 1.2mm;
     box-sizing: border-box;
     resize: none;
@@ -305,7 +310,7 @@ body {
     border-radius: 3mm;    
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     position: relative;
 
 }
@@ -324,28 +329,22 @@ body {
 
 .gearlist {
     margin-bottom: 2mm;
+    width: 100%;
 }
 
 .gearlist .gear_underline  {
     position: relative;
+    display: block;
 }
 
 .gearlist input {
-    font-size: 3mm;
-    background-color: transparent;    
-
+    background-color: transparent;
 }
 
-.gearlist .gear_underline::after{
-    content: "";
-    display: block;
-    position: relative;
+.gear_underline > input[type="text"] {
+    font-size: 0.36rem;
     width: 100%;
-    height: .2mm;
-    left: 0;
-    bottom: 1mm;
-    background: black;
-    z-index: -1;
+    border-bottom: 1px solid black;
 }
 
 .grey {
@@ -496,7 +495,9 @@ body {
 }
 
 input[type=text] {
-    font-family: 'Shalimar', cursive;
+    font-family: 'Kalam', system-ui;
+    font-size: 0.65rem;
+    text-transform: capitalize;
     border: none;
     padding: 0;
 }
@@ -578,11 +579,12 @@ input.char-hdcurr {
     width: 42mm;
     height: .3mm;
     background: black;
+    display: none;
 }
 
 .name_block input[type=text] {
     border: none;
-    font-size: 6.7mm;
+    font-size: 1.2rem;
     width: 45mm;
     box-sizing: border-box;
 }
@@ -593,7 +595,7 @@ input.char-hdcurr {
 
 .name_block label {
     position: absolute;
-    top: 5.5mm;
+    top: 7.5mm;
     left: .3mm;
     font-size: 2.4mm;
 }
@@ -631,7 +633,7 @@ input.char-hdcurr {
 
 .prof {
     position: absolute;
-    opacity: 0;
+    opacity: 1;
     top: 0px;
     left: -4px;
     z-index: 10;
@@ -648,12 +650,13 @@ input.char-hdcurr {
     border-radius: 50%;
     border: .2mm solid black;
     top: .5mm;
+    opacity: 0;
 }
 
 .prof:checked ~ .proficiency-cover {
     background-color: #444;
     box-shadow: 0 0px 1px 1px rgba(255, 255, 255, .8) inset;
-    opacity: 1;
+    opacity: 0;
 }
 
 .shield {
@@ -714,6 +717,7 @@ input.char-hdcurr {
     width: 3mm;
     height: 0.2mm;
     background: black;
+    opacity: 0;
 }
 
 .skills {
