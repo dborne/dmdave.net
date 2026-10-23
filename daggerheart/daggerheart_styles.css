@@ -1,0 +1,17 @@
+
+table {
+    width: 50%;
+    margin: 2em 0;
+}
+
+th {
+    border-bottom: 1px solid black;
+}
+
+tr td {
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #cce;
+}
